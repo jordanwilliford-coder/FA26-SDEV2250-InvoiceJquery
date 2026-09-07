@@ -1,10 +1,18 @@
 function processRow(e) {
+  let invoiceSubtotal = 0;
+
   $(e).closest('tbody').find('tr').each(function(index) {
     let qty = parseFloat($(this).find('input.calc[name="quantity"').val());
     let cost = parseFloat($(this).find('input.calc[name="cost"').val());
     let subtotal = (qty * cost).toFixed(2);
-    $(this).find('input[name="itemTotal"]').val(subtotal);
+    $(this).find('input[name="itemTotal"]').val(subtotal); //Current row total 
+    //Row Caluclations Here
+
+    invoiceSubtotal = invoiceSubtotal + parseFloat(subtotal);
+
+
   });
+  $('#subTotal').val(invoiceSubtotal);
 };
 
 function addRow(e) {
