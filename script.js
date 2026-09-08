@@ -3,8 +3,8 @@ function processRow(e) {
   let invoiceSubtotal = 0;
 
   $(e).closest('tbody').find('tr').each(function(index) {
-    let qty = parseFloat($(this).find('input.calc[name="quantity"').val()); //get qty
-    let cost = parseFloat($(this).find('input.calc[name="cost"').val()); // get cost
+    let qty = parseFloat($(this).find('input.calc[name="quantity"]').val()); //get qty
+    let cost = parseFloat($(this).find('input.calc[name="cost"]').val()); // get cost
     
     let subtotal = (qty * cost).toFixed(2); // row total
     
