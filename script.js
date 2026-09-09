@@ -1,8 +1,8 @@
 function processRow(e) {
   let currentTable = $(e).closest('table');
   let invoiceSubtotal = 0;
-
-  $(e).closest('tbody').find('tr').each(function(index) {
+  
+  $(currentTable).find('tbody tr').each(function(index) {
     let qty = parseFloat($(this).find('input.calc[name="quantity"]').val()); //get qty
     let cost = parseFloat($(this).find('input.calc[name="cost"]').val()); // get cost
     
@@ -41,8 +41,13 @@ function main() {
   });
   // find all input elements that will trigger a recalculation of the 
   // sheet.
+  // 
   $('.sheet input.calc').on('change', function(e) {
     processRow(this);
+  });
+
+  $('.sheet') .each(function() {
+    processRow($(this).find('input.calc').first());
   });
 }
 

@@ -10,9 +10,11 @@
 
 <body>
   <div class="invoiceTable">
+
     <h3>Invoice Sheet</h3>
+
     <table id="sheet0" class="sheet">
-        <thead>
+      <thead>
         <tr>
           <th>Item</th>
           <th>Quantity</th>
@@ -20,6 +22,7 @@
           <th>Total</th>
         </tr>
       </thead>
+
       <tbody>
         <tr>
           <td><input name="item" type="text" value=""></td>
@@ -27,6 +30,7 @@
           <td><input class="calc" name="cost" type="number" value="0.00" size="10"></td>
           <td><input name="itemTotal" type="number" value="0.00" size="10" readonly></td>
         </tr>
+
         <tr>
           <td><input name="item" type="text" value=""></td>
           <td><input class="calc" name="quantity" type="number" value="0.00" size="10"></td>
@@ -34,6 +38,7 @@
           <td><input name="itemTotal" type="number" value="0.00" size="10" readonly></td>
         </tr>
       </tbody>
+
       <tfoot>
         <tr>
           <td><button type="button" class="addRow">+</button></td>
@@ -41,12 +46,14 @@
           <td>Sub Total:</td>
           <td><input name="subTotal" type="number" value="0.00" size="10" readonly></td>
         </tr>
+
         <tr>
           <td></td>
           <td></td>
-          <td>Tax: <input class="calc"name="tax" type="number" value="6" size="3">%</td>
+          <td>Tax: <input class="calc" name="tax" type="number" value="0" size="3">%</td>
           <td><input name="taxTotal" type="number" value="0.00" size="10" readonly></td>
         </tr>
+
         <tr>
           <td></td>
           <td></td>
@@ -55,58 +62,66 @@
         </tr>
       </tfoot>
     </table>
+
+
+    <table id="sheet1" class="sheet">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Rate/Cost</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><input name="item" type="text" value=""></td>
+          <td><input class="calc" name="quantity" type="number" value="0.00" size="10"></td>
+          <td><input class="calc" name="cost" type="number" value="0.00" size="10"></td>
+          <td><input name="itemTotal" type="number" value="0.00" size="10" readonly></td>
+        </tr>
+
+        <tr>
+          <td><input name="item" type="text" value=""></td>
+          <td><input class="calc" name="quantity" type="number" value="0.00" size="10"></td>
+          <td><input class="calc" name="cost" type="number" value="0.00" size="10"></td>
+          <td><input name="itemTotal" type="number" value="0.00" size="10" readonly></td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td><button type="button" class="addRow">+</button></td>
+          <td></td>
+          <td>Sub Total:</td>
+          <td><input name="subTotal" type="number" value="0.00" size="10" readonly></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td>Tax: <input class="calc" name="tax" type="number" value="0" size="3">%</td>
+          <td><input name="taxTotal" type="number" value="0.00" size="10" readonly></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td>Total</td>
+          <td><input name="total" type="number" value="0.00" size="10" readonly></td>
+        </tr>
+      </tfoot>
+    </table>
+
   </div>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+
   <script src="script.js"></script>
+
 </body>
 
 </html>
-
-    <table id="sheet1" class="sheet">
-        <thead>
-        <tr>
-          <th>Item</th>
-          <th>Quantity</th>
-          <th>Rate/Cost</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input name="item" type="text" value=""></td>
-          <td><input class="calc" name="quantity" type="number" value="0.00" size="10"></td>
-          <td><input class="calc" name="cost" type="number" value="0.00" size="10"></td>
-          <td><input name="itemTotal" type="number" value="0.00" size="10" readonly></td>
-        </tr>
-        <tr>
-          <td><input name="item" type="text" value=""></td>
-          <td><input class="calc" name="quantity" type="number" value="0.00" size="10"></td>
-          <td><input class="calc" name="cost" type="number" value="0.00" size="10"></td>
-          <td><input name="itemTotal" type="number" value="0.00" size="10" readonly></td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td><button type="button" class="addRow">+</button></td>
-          <td></td>
-          <td>Sub Total:</td>
-          <td><input name="subTotal" type="number" value="0.00" size="10" readonly></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td>Tax: <input class="calc" name="tax" type="number" value="6" size="3">%</td>
-          <td><input name="taxTotal" type="number" value="0.00" size="10" readonly></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td>Total</td>
-          <td><input name="total" type="number" value="0.00" size="10" readonly></td>
-        </tr>
-      </tfoot>
-    </table>
-  </div>
-
